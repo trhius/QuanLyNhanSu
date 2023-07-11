@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'Roboto' ,sans-serif;
+}
+::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url('/image/home_bg.jpg');
+        background-image: url('https://howkteam.vn/Content/images/index/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    height: 90vh;
+    padding-left:  8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1 {
+    color: #fff;
+    font-size: 100px;
+    margin: 0;
+}
+
+p {
+    color: #fff;
+    height: 100%;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+button {
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0px 25px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 25px 15px;
+    background-image: url("/image/pic-1.png");
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    
+}
+
+h5 a {
+    margin-bottom: 80%;
+    color: #fff;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    text-shadow: 0 0 px #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+h5 {
+    margin-top: 152%;
+    align-items: center;
+    text-align: center;
+}
+.card1 {
+    background-image: url("/image/home_tuyendung.svg");
+}
+
+.card2 {
+    background-image: url("/image/home_nhansu.svg");
+}
+
+.card3 {
+    background-image: url("/image/home_chamcong.svg");
+}
+
+.card4 {
+    background-image: url("/image/home_quyetdinh.svg");
+}
+
+.card5 {
+    background-image: url("/image/home_baocao.svg");
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+

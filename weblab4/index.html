@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>cms dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!----css3---->
+  <link rel="stylesheet" href="css/custom.css" />
+  <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!--google material icon-->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="body-overlay"></div>
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>
+          <img src="img/home_baocao.svg" class="img-fluid" /><span>Nhân sự</span>
+        </h3>
+      </div>
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#" class="dashboard" onclick="switchTab('tab1')"><i
+              class="material-icons">dashboard</i><span>Dashboard</span></a>
+        </li>
+
+        <div class="small-screen navbar-display">
+          <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
+            <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+              <i class="material-icons">notifications</i><span>4 notification</span></a>
+            <ul class="collapse list-unstyled menu" id="homeSubmenu0">
+              <li>
+                <a href="#">Bạn có tin nhắn mới</a>
+              </li>
+              <li>
+                <a href="#">Bạn có tin nhắn mới</a>
+              </li>
+              <li>
+                <a href="#">Bạn có tin nhắn mới</a>
+              </li>
+              <li>
+                <a href="#">Bạn có tin nhắn mới</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+            <a href="#"><i class="material-icons">apps</i><span>apps</span></a>
+          </li>
+
+          <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+            <a href="#"><i class="material-icons">person</i><span>user</span></a>
+          </li>
+
+          <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+            <a href="#"><i class="material-icons">settings</i><span>setting</span></a>
+          </li>
+        </div>
+
+        <li class="dropdown">
+          <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" onclick="switchTab('tab2')">
+            <i class="material-icons">settings_accessibility</i>
+            <span>Báo cáo</span></a>     
+        </li>
+
+        <li class="">
+          <a href="../view/view_home.html"><i class="material-icons">arrow_back</i><span>Trở lại</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <div class="top-navbar">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+              <span class="material-icons">arrow_back_ios</span>
+            </button>
+
+            <a class="navbar-brand" href="#"> Dashboard </a>
+
+            <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="material-icons">more_vert</span>
+            </button>
+
+            <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none"
+              id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="dropdown nav-item active">
+                  <a href="#" class="nav-link" data-toggle="dropdown">
+                    <span class="material-icons">notifications</span>
+                    <span class="notification">4</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Bạn có tin nhắn mới</a>
+                    </li>
+                    <li>
+                      <a href="#">Bạn có tin nhắn mới</a>
+                    </li>
+                    <li>
+                      <a href="#">Bạn có tin nhắn mới</a>
+                    </li>
+                    <li>
+                      <a href="#">Bạn có tin nhắn mới</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-icons">apps</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-icons">person</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-icons">settings</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="main-content tab-content" id="tab1">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-header">
+                <div class="icon icon-warning">
+                  <span class="material-icons">equalizer</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="category"><strong>Báo cáo tuyển dụng</strong></p>
+                <h3 class="card-title">150</h3>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons text-info">update</i>
+                  <a href="#pablo">Cập nhật 11/07/2023</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-header">
+                <div class="icon icon-rose">
+                  <span class="material-icons">person</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="category"><strong>Báo cáo nhân sự</strong></p>
+                <h3 class="card-title">130</h3>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">update</i> Cập nhật 11/07/2023
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-header">
+                <div class="icon icon-success">
+                  <span class="material-icons"> functions </span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="category"><strong>Báo cáo lương</strong></p>
+                <h3 class="card-title">120</h3>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">update</i> Cập nhật 11/07/2023
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-header">
+                <div class="icon icon-info">
+                  <span class="material-icons"> follow_the_signs </span>
+                </div>
+              </div>
+              <div class="card-content">
+                <p class="category"><strong>Báo cáo quyết định</strong></p>
+                <h3 class="card-title">50</h3>
+              </div>
+              <div class="card-footer">
+                <div class="stats">
+                  <i class="material-icons">update</i> Cập nhật 11/07/2023
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <div class="card" style="min-height: 485px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Tổng quan</h4>
+                <p class="category">Cập nhật ngày 11/07/2023</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table table-hover">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>Etc</th>
+                      <th>Etc</th>
+                      <th>Etc</th>
+                      <th>Etc</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Etc</td>
+                      <td>Etc</td>
+                      <td>Etc</td>
+                      <td>Etc</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12">
+            <div class="card" style="min-height: 485px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Nhắc việc</h4>
+              </div>
+              <div class="card-content">
+                <div class="streamline">
+                  <div class="sl-item sl-primary">
+                    <div class="sl-content">
+                      <small class="text-muted">Hiện tại</small>
+                      <p>Tuyển dụng mùa hè</p>
+                    </div>
+                  </div>
+                  <div class="sl-item sl-danger">
+                    <div class="sl-content">
+                      <small class="text-muted">Tháng 10</small>
+                      <p>Tuyển dụng mùa đông</p>
+                    </div>
+                  </div>
+                  <div class="sl-item sl-success">
+                    <div class="sl-content">
+                      <small class="text-muted">Tháng 10/2023</small>
+                      <p>Tuyển dụng kỹ sư</p>
+                    </div>
+                  </div>
+                  <div class="sl-item">
+                    <div class="sl-content">
+                      <small class="text-muted">Tháng 10/2023</small>
+                      <p>Tuyển dụng thực tập sinh</p>
+                    </div>
+                  </div>
+                  <div class="sl-item sl-warning">
+                    <div class="sl-content">
+                      <small class="text-muted">Tháng 12/2023</small>
+                      <p>Tuyển dụng thực Fresher</p>
+                    </div>
+                  </div>
+                  <div class="sl-item">
+                    <div class="sl-content">
+                      <small class="text-muted">Tháng 2/2024</small>
+                      <p>Tuyển dụng mùa xuân</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <nav class="d-flex">
+                  <ul class="m-0 p-0">
+                    <li>
+                      <a href="#"> Home </a>
+                    </li>
+                    <li>
+                      <a href="#"> Company </a>
+                    </li>
+                    <li>
+                      <a href="#"> Portfolio </a>
+                    </li>
+                    <li>
+                      <a href="#"> Blog </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-6">
+                <p class="copyright d-flex justify-content-end">
+                  &copy 2023 Design by
+                  <a href="#">Nhóm 14</a> Admin Dashboard
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div id="tab2" class="tab-content">
+        <div class="row">
+          <div class="input-group m-3">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Tìm kiếm"
+              aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">Tìm kiếm</button>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="card" style="min-height: 700px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Thông tin báo cáo</h4>
+                <p class="category">Cập nhật ngày 11/07/2023</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table table-hover" id="positionTable">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>Mã báo cáo</th>
+                      <th>Tên báo cáo</th>
+                      <th>Nội dung</th>
+                      <th>Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="yeucau_body">
+                    <tr>
+                      <td>BC01</td>
+                      <td>Tuyển dụng</td>
+                      <td>Tuyển dụng thực tập sinh</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>BC01</td>
+                      <td>Tuyển dụng</td>
+                      <td>Tuyển dụng thực tập sinh</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5 col-md-12 ml-0">
+            <div class="card" style="min-height: 700px">
+              <form class="m-4" id="addPositionForm">
+                <div class="form-group mb-2">
+                  <h5>Nhân sự</h5>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">Mã báo cáo</label>
+                  <input class="form-control" id="input_maTD" aria-describedby="emailHelp"
+                    placeholder="Nhập mã">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Tên Báo cáo</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Tuyển dụng
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Nhân sự
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Lương
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Quyết định
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Nội dung</label>
+                  <input class="form-control" id="input_soLuong" aria-describedby="emailHelp"
+                    placeholder="Nhập phòng ban">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Thêm</button>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div id="tab3" class="tab-content">
+        <div class="row">
+          <div class="input-group m-3">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Tìm kiếm"
+              aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">Tìm kiếm</button>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="card" style="min-height: 700px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Phòng ban</h4>
+                <p class="category">Cập nhật ngày 11/07/2023</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table table-hover" id="positionTable">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>Mã phòng ban</th>
+                      <th>Tên phòng ban</th>
+                      <th>Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="yeucau_body">
+                    <tr>
+                      <td>PB01</td>
+                      <td>Phòng nhân sự</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>PB02</td>
+                      <td>Phòng hành chính</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5 col-md-12 ml-0">
+            <div class="card" style="min-height: 700px">
+              <form class="m-4" id="addPositionForm">
+                <div class="form-group mb-2">
+                  <h5>Nhập phòng ban</h5>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">Mã phòng ban</label>
+                  <input class="form-control" id="input_maUV" aria-describedby="emailHelp"
+                    placeholder="Nhập mã phòng ban">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Tên phòng ban</label>
+                  <input class="form-control" id="input_viTriUT" aria-describedby="emailHelp"
+                    placeholder="Nhập tên phòng ban">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Thêm</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab4" class="tab-content">
+        <div class="row">
+          <div class="input-group m-3">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Tìm kiếm"
+              aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">Tìm kiếm</button>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="card" style="min-height: 700px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Chức vụ</h4>
+                <p class="category">Cập nhật ngày 11/07/2023</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table table-hover" id="positionTable">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>Mã chức vụ</th>
+                      <th>Tên chức vụ</th>
+                      <th>Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="yeucau_body">
+                    <tr>
+                      <td>CV01</td>
+                      <td>Giám đốc vận hành</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>CV02</td>
+                      <td>Giám đốc phát triển</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>CV03</td>
+                      <td>Giám đốc công nghệ</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5 col-md-12 ml-0">
+            <div class="card" style="min-height: 700px">
+              <form class="m-4" id="addPositionForm">
+                <div class="form-group mb-2">
+                  <h5>Nhập thông tin chức vụ</h5>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">Mã chức vụ</label>
+                  <input class="form-control" id="input_maUV" aria-describedby="emailHelp"
+                    placeholder="Nhập mã">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Tên chức vụ</label>
+                  <input class="form-control" id="input_viTriUT" aria-describedby="emailHelp"
+                    placeholder="Nhập địa điểm">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Thêm</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab5" class="tab-content">
+        <div class="row">
+          <div class="input-group m-3">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Tìm kiếm"
+              aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-primary">Tìm kiếm</button>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="card" style="min-height: 700px">
+              <div class="card-header card-header-text">
+                <h4 class="card-title">Danh sách hợp đồng</h4>
+                <p class="category">Cập nhật ngày 11/07/2023</p>
+              </div>
+              <div class="card-content table-responsive">
+                <table class="table table-hover" id="positionTable">
+                  <thead class="text-primary">
+                    <tr>
+                      <th>Mã hợp đồng</th>
+                      <th>Tên hợp đồng</th>
+                      <th>Ngày hết hạn</th>
+                      <th>Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="yeucau_body">
+                    <tr>
+                      <td>HD01</td>
+                      <td>Hợp đồng với BK.AI</td>
+                      <td>10/10/2025</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>HD02</td>
+                      <td>Hợp đồng với Samsung</td>
+                      <td>10/10/2025</td>
+                      <td>
+                        <div class="row">
+                          <button type="button" class="btn btn-warning mr-1">Sửa</button>
+                          <button type="button" class="btn btn-danger">Xoá</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5 col-md-12 ml-0">
+            <div class="card" style="min-height: 700px">
+              <form class="m-4" id="addPositionForm">
+                <div class="form-group mb-2">
+                  <h5>In hợp đồng</h5>
+                </div>
+                <div class="form-group mt-4">
+                  <label for="exampleInputEmail1">Mã hợp đồng</label>
+                  <input class="form-control" id="input_maTD" aria-describedby="emailHelp"
+                    placeholder="Nhập mã hợp đồng">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Tên hợp đồng</label>
+                  <input class="form-control" id="input_viTri" aria-describedby="emailHelp"
+                    placeholder="Nhập tên hợp đồng">
+                </div>
+                <div class="form-group mt-2">
+                  <label for="exampleInputEmail1">Ngày hết hạn</label>
+                  <input class="form-control" id="input_viTri" aria-describedby="emailHelp"
+                    placeholder="Nhập ngày hết hạn">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Lưu</button>
+                <button type="submit" class="btn btn-primary mt-3">Xuất</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+      // Show the first tab content by default
+      document.getElementById('tab1').style.display = 'block';
+    </script>
+
+    <script>
+      document.getElementById('addPositionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get input values
+        var maTD = document.getElementById('input_maTD').value;
+        var viTri = document.getElementById('input_viTri').value;
+        var soLuong = document.getElementById('input_soLuong').value;
+        var hanNop = document.getElementById('input_hanNop').value;
+
+        // Create a new table row
+        var table = document.getElementById('positionTable').getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow();
+
+        // Insert cells into the new row
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+
+        // Assign values to the cells
+        cell1.innerHTML = maTD;
+        cell2.innerHTML = viTri;
+        cell3.innerHTML = soLuong;
+        cell4.innerHTML = hanNop;
+        cell5.innerHTML = `
+      <div class="row">
+        <button type="button" class="btn btn-warning mr-1">Sửa</button>
+        <button type="button" class="btn btn-danger">Xoá</button>
+      </div>`;
+
+        // Clear input values
+        document.getElementById('input_maTD').value = '';
+        document.getElementById('input_viTri').value = '';
+        document.getElementById('input_soLuong').value = '';
+        document.getElementById('input_hanNop').value = '';
+      });
+    </script>
+
+    <script>
+      // Function to handle row deletion
+      function deleteRow(button) {
+        var row = button.parentNode.parentNode.parentNode; // Get the row element
+        row.parentNode.removeChild(row); // Remove the row from the table
+      }
+
+
+
+      // Add event listeners to delete buttons
+      var deleteButtons = document.getElementsByClassName('btn-danger');
+      for (var i = 0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', function () {
+          deleteRow(this);
+        });
+      }
+
+      // Add event listener to the form submit event
+      document.getElementById('addPositionForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Rest of the code...
+      });
+    </script>
+
+
+    <script>
+      // Function to switch tabs
+      function switchTab(tabId) {
+        // Hide all tab content
+        var tabContent = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = 'none';
+        }
+
+        // Show the selected tab content
+        document.getElementById(tabId).style.display = 'block';
+      }
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").toggleClass("active");
+          $("#content").toggleClass("active");
+        });
+
+        $(".more-button,.body-overlay").on("click", function () {
+          $("#sidebar,.body-overlay").toggleClass("show-nav");
+        });
+      });
+    </script>
+</body>
+
+</html>
